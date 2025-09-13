@@ -47,7 +47,7 @@ def generate_report_text():
     SPREADSHEET_ID = os.environ.get("SPREADSHEET_ID")
     SHEET_NAME = "SQM"
     TIMEZONE = "Asia/Tokyo"
-    THRESHOLD_UMUR = 10
+    THRESHOLD_UMUR = int(os.environ.get("UMUR_THRESHOLD", "12"))
 
     gc = get_gspread_client()
     if not gc:
