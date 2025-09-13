@@ -41,7 +41,7 @@ class handler(BaseHTTPRequestHandler):
                 return
 
             # --- NEW: Check for the /report command ---
-            if text == "/report":
+            if text == "/laporantiket":
                 send_chunked_message(chat_id, "Generating report, please wait...")
                 success, report_text = generate_report_text()
                 send_chunked_message(chat_id, report_text)
